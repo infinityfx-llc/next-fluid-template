@@ -1,6 +1,10 @@
+import './globals.css';
+import '../fluid.css';
+
 import { FluidProvider } from '@infinityfx/fluid';
 import type { Metadata } from 'next';
-import './globals.css';
+import { Splash } from '@infinityfx/splash';
+import Header from '@/components/header';
 
 export const metadata: Metadata = {
     title: {
@@ -9,12 +13,18 @@ export const metadata: Metadata = {
     }
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children }: {
+    children: React.ReactNode;
+}) {
 
     return <html lang="en">
         <FluidProvider>
             <body>
-                {children}
+                <Splash>
+                    <Header />
+
+                    {children}
+                </Splash>
             </body>
         </FluidProvider>
     </html>;

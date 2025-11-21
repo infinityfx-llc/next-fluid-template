@@ -1,4 +1,5 @@
-body {
-    color: var(--f-clr-text-100);
-    background-color: var(--f-clr-bg-100);
+:root {
+    --header: calc(4rem + env(safe-area-inset-top));
+    --page-width: 64rem;
+    --page-padding: max(calc((100vw - var(--page-width)) / 2), var(--f-spacing-med));
 }

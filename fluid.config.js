@@ -1,2 +1,4 @@
-/** @type {import('@infinityfx/fluid/types').FluidConfig} */
-module.exports = {}
+/** @type {import('@infinityfx/fluid').FluidConfig} */
+module.exports = {
+    cssOutput: 'manual'
+}
